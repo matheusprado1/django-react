@@ -13,7 +13,7 @@ function Homescreens() {
 
 function showProduct(product) {
   return (
-    <Col>
+    <Col key={product._id}>
       <SingleProduct product={product} />
     </Col>
   );
