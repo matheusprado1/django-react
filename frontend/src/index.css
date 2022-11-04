@@ -1,3 +1,7 @@
 main{
   min-height: 80vh;
 }
+
+#stars-color{
+  color: #f1c40f;
+}
