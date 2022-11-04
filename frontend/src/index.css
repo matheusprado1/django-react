@@ -5,3 +5,8 @@ main{
 #stars-color{
   color: #f1c40f;
 }
+
+.star-rating{
+  margin-left: 2%;
+  font-style: italic;
+}

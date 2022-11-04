@@ -6,7 +6,8 @@ const Products= [
         'price': 100,
         'desc': 'produto novo',
         'rating': 4.1,
-        'image': '/images/produto1.jpg'
+        'image': '/images/produto1.jpg',
+        "count_in_stock": 0,
     },
     {
         '_id':'2',
@@ -15,7 +16,8 @@ const Products= [
         'price': 200,
         'desc': 'produto semi novo',
         'rating': 4.3,
-        'image': '/images/produto2.jpg'
+        'image': '/images/produto2.jpg',
+        "count_in_stock": 10,
     },
     {
         '_id':'3',
@@ -24,7 +26,8 @@ const Products= [
         'price': 300,
         'desc': 'produto novo',
         'rating': 3.1,
-        'image': '/images/produto3.jpg'
+        'image': '/images/produto3.jpg',
+        "count_in_stock": 10,
     },
     {
         '_id':'4',
@@ -33,7 +36,8 @@ const Products= [
         'price': 400,
         'desc': 'produto novo',
         'rating': 2.1,
-        'image': '/images/produto4.jpg'
+        'image': '/images/produto4.jpg',
+        "count_in_stock": 10,
     },
 ]
 
