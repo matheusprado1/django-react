@@ -1,5 +1,6 @@
 import React from "react";
 import { Card } from "react-bootstrap";
+import Rating from "./Rating";
 
 function SingleProduct({ product }) {
   return (
@@ -9,6 +10,7 @@ function SingleProduct({ product }) {
           <Card.Img src={product.image} />
           <Card.Title>{product.name}</Card.Title>
           <Card.Text>{product.desc}</Card.Text>
+          <Rating value={product.rating} />
           <h2>R${product.price}</h2>
         </Card.Body>
       </Card>
