@@ -1,14 +1,36 @@
-import React from "react";
-import { Row, Col } from "react-bootstrap";
+import React from 'react'
 
-function Footer(){
-    return(
-        <footer>
-            <Row>
-                <Col className="text-center py-3">Meu carrinho 2022 &#169;</Col>
-            </Row>
-        </footer>
-    )
+function Footer() {
+  return (
+    <>
+      <footer className="d-flex flex-wrap justify-content-between container align-items-center my-5 border-top">
+            <div className="col-md-4 d-flex align-items-center">
+              <a
+                href="/"
+                className="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1"
+              >
+                PythonScripts
+              </a>
+              <span className="mb-3 mb-md-0 text-muted">
+                © 2022 Company, Inc
+              </span>
+            </div>
+
+            <ul className="nav col-md-4 justify-content-end list-unstyled d-flex pt-2">
+              <li className="ms-3">
+                <a className="text-muted" href="#">
+                  <i className="fa-brands fa-linkedin fa-2x"></i>
+                </a>
+              </li>
+              <li className="ms-3">
+                <a className="text-muted" href="#">
+                  <i className="fa-brands fa-github fa-2x"></i>
+                </a>
+              </li>
+            </ul>
+          </footer>
+    </>
+  )
 }
 
-export default Footer;
+export default Footer

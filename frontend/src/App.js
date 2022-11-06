@@ -1,31 +1,23 @@
-import React from "react";
-import Footer from "./components/Footer";
+import { Routes, Route } from "react-router-dom";
+
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/js/bootstrap.js";
+
 import Header from "./components/Header";
-import HomeScreens from "./screen/HomeScreens";
-import ProductScreen from "./screen/ProductScreen";
-import Auth from "./screen/Auth";
-import CartScreen from "./screen/CartScreen";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Container } from "react-bootstrap";
+import Footer from "./components/Footer";
+import Home from "./components/Home";
+import Categories from "./components/Categories";
 
 function App() {
   return (
-    <div>
-      <Router>
-        <Header />
-        <main>
-          <Container className="py-5">
-            <Routes>
-              <Route path="/" exact element={<HomeScreens/>} />
-              <Route path="/product/:id" exact element={<ProductScreen/>} />
-              <Route path="/cart" exact element={<CartScreen/>} />
-              <Route path="/login" exact element={<Auth/>} />
-            </Routes>
-          </Container>
-        </main>
-        <Footer />
-      </Router>
-    </div>
+    <>
+      <Header />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/categories" element={<Categories />} />
+      </Routes>
+      <Footer />
+    </>
   );
 }
 
