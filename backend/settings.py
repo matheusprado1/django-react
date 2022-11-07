@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-i-b2o_4@ru#jr_y)vbhdjng$607jjufk4i8b+*wrk0p&!ae%-e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'https://djangoreactmatheusprado1.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'https://djangoreactmp1.herokuapp.com']
 
 
 # Application definition
@@ -105,7 +105,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, "frontend/build")
+            os.path.join(BASE_DIR, "build")
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -171,6 +171,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
@@ -178,7 +179,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 STATICFILES_DIRS = [
     BASE_DIR/'static',
-    BASE_DIR/'frontend/build/static',
+    BASE_DIR/'build/static',
 ]
 
 

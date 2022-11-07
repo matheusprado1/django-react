@@ -61,3 +61,4 @@ traitlets==5.4.0
 uritemplate==4.1.1
 virtualenv==20.16.6
 wcwidth==0.2.5
+whitenoise==6.2.0
