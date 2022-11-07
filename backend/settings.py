@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+from datetime import timedelta
 from pathlib import Path
 import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-i-b2o_4@ru#jr_y)vbhdjng$607jjufk4i8b+*wrk0p&!ae%-e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
@@ -37,24 +38,22 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #local apps
+    # local apps
     'base.apps.BaseConfig',
-    #3rd party apps 
+    # 3rd party apps
     'rest_framework',
     'corsheaders',
 ]
 
-# Simple JWT 
+# Simple JWT
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
-      
+
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
-   
+
 }
 
-
-from datetime import timedelta
 
 ...
 
@@ -106,7 +105,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR,"frontend/build")
+            os.path.join(BASE_DIR, "frontend/build")
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -162,11 +161,9 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Asia/Kolkata'
+TIME_ZONE = 'UTC'
 
 USE_I18N = True
-
-USE_L10N = True
 
 USE_TZ = True
 
@@ -174,16 +171,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR ,"media")
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 STATICFILES_DIRS = [
     BASE_DIR/'static',
-    BASE_DIR/'frontend/build/static', 
+    BASE_DIR/'frontend/build/static',
 ]
-
 
 
 CORS_ALLOW_ALL_ORIGINS = True
